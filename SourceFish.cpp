@@ -15,8 +15,8 @@ int main()
     badfish.AddFish(Fish("Piranya", true, 1, "Piranya Eater 3 -", rand() % 20, "Piranya", 1));
     badfish.AddFish(Fish("Paranya", true, 4, "Piranya Eater 4 -", rand() % 20, "Piranya", 4));
 
-    goodfish.bigest();
-    badfish.bigest();
+    goodfish.Bigest();
+    badfish.Bigest();
 
     return 0;
 }

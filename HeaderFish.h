@@ -46,14 +46,14 @@ public:
 
 class Aquarium {
 private:
-    int freeSpace;
-    std::vector <Fish> fish;
+    int free_space;
+    std::vector <Fish> fishes;
 
 public:
     bool AddFish(Fish fish) {
-        if (freeSpace - fish.getSpace() >= 0) {
-            this->fish.push_back(fish);
-            freeSpace -= fish.getSpace();
+        if (free_space - fish.getSpace() >= 0) {
+            this->fishes.push_back(fish);
+            free_space -= fish.getSpace();
             return true;
         }
         else {
@@ -62,13 +62,13 @@ public:
         }
     }
 
-    int getFreeSpace() { return freeSpace; }
+    int getFreeSpace() { return free_space; }
 
-    void bigest() {
-        fish = Sort(fish);
+    void Bigest() {
+        fishes = Sort(fishes);
         std::cout << "Rating:\n";
-        for (auto& f : fish) {
-            std::cout << f.getName() << " " << f.getSize() << " " << std::endl;
+        for (auto& other : fishes) {
+            std::cout << other.getName() << " " << other.getSize() << " " << std::endl;
         }
     }
 
@@ -86,7 +86,7 @@ public:
     }
 
     Aquarium(float volume) {
-        this->freeSpace = volume;
+        this->free_space = volume;
     }
 
 
